@@ -2,6 +2,10 @@
 
 核对日期：2026-10-12，Asia/Shanghai。仅 Phase 1；本报告不授权执行 Phase 2。
 
+本报告的运行证据来自Windows；Intel Mac接手读[MAC_HANDOFF.md](MAC_HANDOFF.md)，最新远程分支/真实进度读根目录HANDOFF.md。GitHub交接分支已在Mac移交前核对同步，Mac运行尚未验收。
+
+分类统计补充：后续交接只读核验meta.seed_tree得到5/38/334；本报告历史333口径未确认，保留历史记录，不作为硬编码依据。数据库与源码未因此改动。
+
 ## 1. Phase 1 分析结果
 
 ### 基线与环境

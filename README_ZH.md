@@ -1,5 +1,6 @@
 > LATIV 项目接手入口：[AGENTS.md](AGENTS.md)（长期规则）、[HANDOFF.md](HANDOFF.md)（当前进度与下一步）。
 > 新电脑重建：[docs/LOCAL_REBUILD.md](docs/LOCAL_REBUILD.md)。
+> Intel Mac 接手及报告目录：[docs/MAC_HANDOFF.md](docs/MAC_HANDOFF.md)。
 > 下方保留官方 CRMEB 说明；原生功能列表不代表 LATIV 适配已经完成。
 
 <div align="center" >

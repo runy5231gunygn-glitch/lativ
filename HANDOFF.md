@@ -1,6 +1,8 @@
 # OpenCode 动态交接
 
-核对日期：2026-10-12（Asia/Shanghai）。本次仅冻结、核查和交接，没有开始Phase 2。长期规则见AGENTS.md；历史分析见docs/PHASE1_REPORT.md；新电脑重建见docs/LOCAL_REBUILD.md。
+核对日期：2026-10-12（Asia/Shanghai）。仅冻结、核查和交接，没有开始Phase 2。长期规则见AGENTS.md；历史分析见docs/PHASE1_REPORT.md；Intel Mac接手读docs/MAC_HANDOFF.md，Windows重建读docs/LOCAL_REBUILD.md。
+
+本次Mac移交前已只读确认：GitHub的codex/lativ-phase1存在，远程/本地均为e2f5524e，跟踪origin/codex/lativ-phase1，ahead/behind均0；用户已解决认证并完成上传。后续文档更新仍提交/推送同一分支，不覆盖main。Mac环境尚未实际部署或验收。
 
 ## 项目目标
 
@@ -12,7 +14,7 @@
 
 - 分支codex/lativ-phase1；本次开始时git status干净，git diff和暂存区均为空。
 - 固定官方源码da8d3b93400f3c660aa54d38b54ada387c963cd9，CRMEB-KY v6.0.0。源码以codeload导入本地基线，未保留官方完整Git提交历史。
-- 本地基线501ffcc4；Phase 1成果26470407。相对基线的改动仅.gitignore、docs、scripts/local，crmeb/app、vendor、template业务代码没有改动。
+- 本地基线501ffcc4；Phase 1成果26470407；初次交接e2f5524e。相对基线仅本地辅助、报告/规则和README导航变化，crmeb/app、vendor、template业务代码没有改动。
 - 已有后台和小程序编译包能在本机运行；小程序首页截图展示的是官方演示商品/主题，绝不是LATIV同步商品。
 - app/services/lativ、dao/lativ、model/lativ、LATIV后台、tools/lativ、业务测试及migration均未创建。不存在可调用的LATIV→CRMEB同步实现。
 - 官方README含通用/历史说明；实际后台没有npm run lint、UniApp没有npm构建scripts。以当前package.json、源码和此交接为准。
@@ -70,7 +72,8 @@
 | scripts/local/bootstrap.php | 初次建隔离演示库，随机本地凭据；拒绝覆盖已有库/安装 |
 | scripts/local/start.ps1、stop.ps1、router.php | 启停归属核验、回环服务、后台history路由 |
 | scripts/local/mini-loopback.js | 只拼到测试app.js，转向本机API和包内演示图片，不属于正式商城/图片同步 |
-| 本次指定交接commit | 新增AGENTS.md/HANDOFF.md/重建说明/只读核验记录，README增加导航；不改业务逻辑 |
+| e2f5524e | 新增AGENTS.md/HANDOFF.md/重建说明/只读核验记录，README增加导航；不改业务逻辑，已在GitHub交接分支 |
+| Intel Mac报告整理 | 新增MAC_HANDOFF、补远程同步核验/报告导航/非Git资料与Mac限制；无功能实现 |
 
 最近核心文件的Git提交仍是基线；StoreProduct/OutStoreProductServices/StoreProductServices、规格、分类、上传、订单、调度均无本项目修改。近期核对它们只是读代码。
 
@@ -146,6 +149,7 @@ Phase 4：一张lativ_sync_logs记录导入结果。汇率/加价/舍入、调�
 18. 当前命令路径的Node是24.19.0，超出后台package.engines要求的>14且<23；本次只用它做JS语法检查，未构建后台，未切换/升级依赖。源码构建前恢复兼容的Node环境。
 19. 本地bootstrap/loopback有固定测试库名、端口、演示域名及图片前缀，这是隔离演示配置，不能复制为LATIV生产配置。没有LATIV价格/分类/映射硬编码模块，因为这些模块尚不存在。
 20. .local/phase1-install.php是早期临时建库实验，含重建行为，不是接手入口；保留但禁止运行。只使用有覆盖保护的已提交bootstrap或既有库恢复流程，不能自动执行.local里的实验脚本。
+21. help/docker/run.sh的install/delete删数据，start也清理网络；Mac恢复不要执行这些入口或照旧Docker README清库。原Compose示例密码、端口及固定网络需在本地隔离配置中核对，未做Mac实际启动验证。
 
 ## 测试状态
 
@@ -192,22 +196,22 @@ git clone --branch codex/lativ-phase1 https://github.com/runy5231gunygn-glitch/l
 cd lativ-crmeb
 ~~~
 
-推送是否成功以本次最终报告或远程refs为准；不要误从远程已有main接手。若分支未推送，使用原电脑.local/handoff/lativ-crmeb-opencode.bundle离线clone。
+交接分支已确认在GitHub且有远程跟踪；克隆最新codex/lativ-phase1，不从已有main接手。原电脑离线bundle是e2f5524e时点的历史备份，不包含后续Mac报告更新，当前优先使用GitHub。
 
-clone后先按docs/LOCAL_REBUILD.md准备固定PHP/MariaDB、本地配置、全新隔离库、演示资源和测试副本，再启动。仅clone不能直接运行start/bootstrap。另行安全迁移完整采集器源码及state；同一电脑可直接使用原目录。禁止因缺数据重新抓一套或将7.56GB SQLite放Git。
+Intel Mac按docs/MAC_HANDOFF.md恢复环境；Windows按docs/LOCAL_REBUILD.md。仅clone不能运行Windows start/bootstrap或自动取得源数据。另行安全迁移完整采集器源码及state；禁止因缺数据重新抓一套或将7.56GB SQLite放Git。此次未生成新的采集数据迁移包/SQL备份，资料搬运仍待执行。
 
 ## Git与远程交接
 
 - origin为用户指定的https://github.com/runy5231gunygn-glitch/lativ.git；官方upstream保持https://github.com/crmeb/CRMEB.git。
 - 远程已有main（本次只读查到58b3f8e1e63b895f8aee3bcdbb0e073e58fdc421），不覆盖/合并/强推它。本交接只推codex/lativ-phase1。
-- 提交消息按用户要求：chore: prepare project handoff for OpenCode。
+- 初次交接提交消息：chore: prepare project handoff for OpenCode；后续只将Mac交接文档更新独立提交到原分支。
 - .local、crmeb/.env、数据库/运行文件、上传目录均有意不入Git；有效商城源码和交接文档在Git。临时只读审计脚本不是业务成果，不需要迁进服务层。
 - 对新电脑重要的非Git资料：collector全目录/state/冻结证据；需要复用旧后台数据时的安全DB备份及配置；当前测试副本可重建，不必复制敏感运行环境。按重建文档处理。
 
 ## 下一步任务（有顺序，不重新规划）
 
 1. OpenCode先读AGENTS.md和本文件，确认checkout交接分支、git干净、原电脑还是新电脑；核验已有环境和数据，保持冻结。
-2. 原电脑复用现成环境；新电脑先重建/安全迁移源数据。不要先建业务表、启动采集或自动定时。
+2. 原电脑复用现成环境；Intel Mac按MAC_HANDOFF先恢复Phase 1环境/安全迁移源数据，记下Mac待验收项。不要先建业务表、启动采集或自动定时。
 3. 等用户明确“开始 Phase 2”。未收到时只解决接手/环境核验，不写LATIV业务。
 4. 获授权后先建三映射的可回滚migration/Model/DAO，确认只连接独立测试库，未绑定CRMEB ID允许NULL。
 5. 实现独立只读来源Reader/导出，以committed generation/events为界，去除source_raw；核验334/333分类口径、价格单件语义、稳定来源SKU键。

@@ -1,5 +1,6 @@
 > LATIV project handoff: start with [AGENTS.md](AGENTS.md) and [HANDOFF.md](HANDOFF.md).
 > Local rebuild: [docs/LOCAL_REBUILD.md](docs/LOCAL_REBUILD.md).
+> Intel Mac handoff and report index: [docs/MAC_HANDOFF.md](docs/MAC_HANDOFF.md).
 > The upstream README below describes CRMEB; it is not a record of implemented LATIV integration.
 
 <div align="center" >

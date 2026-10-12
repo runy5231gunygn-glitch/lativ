@@ -150,7 +150,9 @@ npm run build
 & ./scripts/local/stop.ps1
 ~~~
 
-这些脚本依赖未入Git的运行库、初始化数据库与本机配置；新电脑必须先按docs/LOCAL_REBUILD.md重建，不能只clone后直接bootstrap。已有数据库禁止重新初始化/覆盖。Linux的原生php think timer/workerman/queue命令仅在对应阶段和环境授权后启动，不能在交接时启用。
+这些脚本依赖未入Git的运行库、初始化数据库与本机配置；Windows新机按docs/LOCAL_REBUILD.md，Mac按docs/MAC_HANDOFF.md。Mac禁止复用Windows.exe/.dll、junction、PID或物理mysql-data；已有数据库禁止重新初始化/覆盖。跨平台接手先恢复Phase 1环境，不自动进入Phase 2。
+
+help/docker/run.sh包含删库/删runtime及网络清理，不能作为无损恢复入口；不为交接执行install/start/delete、清数据或网络prune。只复用原Docker配置思路并核验本地凭据/端口/数据目录/镜像，不能把旧镜像内的另一份商城当作当前checkout。timer/workerman/queue仅在对应阶段和环境授权后启动。
 
 ## 接手顺序
 

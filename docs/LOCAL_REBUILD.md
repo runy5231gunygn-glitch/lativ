@@ -1,5 +1,7 @@
 # 本地环境重建与非Git资料
 
+本文是Windows重建参考；Intel Mac请直接读[MAC_HANDOFF.md](MAC_HANDOFF.md)，不要在Mac执行本文件的.exe、junction、.ps1或空root初始化步骤。交接分支已在GitHub核对同步。
+
 本说明用于交接，不在本次任务中执行安装、重新建库、重采集、升级依赖或开启后续阶段。原电脑已有环境时直接复用scripts/local/start.ps1，不能重跑bootstrap。新电脑步骤以下以Windows PowerShell、用户目录为英文且无空格为当前验证口径；Linux、其它路径条件尚未做运行验收。
 
 ## 1. 获取正确代码和数据

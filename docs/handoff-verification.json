@@ -273,5 +273,32 @@
     "origin": "https://github.com/runy5231gunygn-glitch/lativ.git",
     "existing_remote_main": "58b3f8e1e63b895f8aee3bcdbb0e073e58fdc421"
   },
-  "push_result": "See final response and actual remote branch; this file is committed before push."
+  "push_result": "Initial handoff e2f5524e confirmed on origin/codex/lativ-phase1 before Intel Mac document update; new documentation commit publication is verified separately by final Git check.",
+  "mac_handoff": {
+    "date": "2026-10-12",
+    "timezone": "Asia/Shanghai",
+    "hardware_confirmed_by_user": "Intel Mac",
+    "macos_version": "not provided",
+    "docker_installed_on_mac": "not confirmed",
+    "mac_runtime_tested": false,
+    "remote_branch": "refs/heads/codex/lativ-phase1",
+    "remote_head_before_document_update": "e2f5524e31c26d7da327cf45b36b13481b5ea6ec",
+    "local_head_before_document_update": "e2f5524e31c26d7da327cf45b36b13481b5ea6ec",
+    "tracking": "origin/codex/lativ-phase1",
+    "ahead": 0,
+    "behind": 0,
+    "remote_main": "58b3f8e1e63b895f8aee3bcdbb0e073e58fdc421",
+    "phase2_started": false,
+    "new_collector_archive_created": false,
+    "new_sql_backup_created": false,
+    "guide": "docs/MAC_HANDOFF.md",
+    "document_checks": {
+      "bash_blocks_parsed": 7,
+      "bash_parse_exit": 0,
+      "json_files_parsed": 3,
+      "private_credential_leaks": 0,
+      "business_changes": 0,
+      "actual_mac_runtime_tested": false
+    }
+  }
 }
