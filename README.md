@@ -1,3 +1,7 @@
+> LATIV project handoff: start with [AGENTS.md](AGENTS.md) and [HANDOFF.md](HANDOFF.md).
+> Local rebuild: [docs/LOCAL_REBUILD.md](docs/LOCAL_REBUILD.md).
+> The upstream README below describes CRMEB; it is not a record of implemented LATIV integration.
+
 <div align="center" >
     <img src="https://www.crmeb.com/static/images/dark_logo.png" />
 </div>

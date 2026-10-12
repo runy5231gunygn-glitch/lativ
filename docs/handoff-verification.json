@@ -1,0 +1,277 @@
+{
+  "date": "2026-10-12",
+  "timezone": "Asia/Shanghai",
+  "purpose": "freeze and handoff only",
+  "branch": "codex/lativ-phase1",
+  "head_before_handoff": "26470407",
+  "upstream_baseline": "da8d3b93400f3c660aa54d38b54ada387c963cd9",
+  "business_source_changed_this_task": false,
+  "phase2_started": false,
+  "database": {
+    "database_available": true,
+    "database": "crmeb_phase1",
+    "server": "5.5.5-10.11.10-MariaDB",
+    "native_table_count": 157,
+    "lativ_tables": [],
+    "counts": {
+      "eb_store_product": 4,
+      "eb_store_product_attr_value": 54,
+      "eb_store_category": 35,
+      "eb_system_timer": 11
+    },
+    "public_config": {
+      "site_url": "\"http:\\/\\/127.0.0.1:18080\"",
+      "upload_type": "\"1\"",
+      "queue_open": "0"
+    },
+    "sku_columns": [
+      {
+        "field": "id",
+        "type": "int(10)"
+      },
+      {
+        "field": "product_id",
+        "type": "int(10) unsigned"
+      },
+      {
+        "field": "suk",
+        "type": "varchar(128)"
+      },
+      {
+        "field": "stock",
+        "type": "int(10) unsigned"
+      },
+      {
+        "field": "sales",
+        "type": "int(10) unsigned"
+      },
+      {
+        "field": "price",
+        "type": "decimal(12,2) unsigned"
+      },
+      {
+        "field": "image",
+        "type": "varchar(128)"
+      },
+      {
+        "field": "unique",
+        "type": "char(8)"
+      },
+      {
+        "field": "cost",
+        "type": "decimal(12,2) unsigned"
+      },
+      {
+        "field": "bar_code",
+        "type": "varchar(50)"
+      },
+      {
+        "field": "bar_code_number",
+        "type": "varchar(50)"
+      },
+      {
+        "field": "ot_price",
+        "type": "decimal(12,2)"
+      },
+      {
+        "field": "vip_price",
+        "type": "decimal(12,2)"
+      },
+      {
+        "field": "weight",
+        "type": "decimal(12,2)"
+      },
+      {
+        "field": "volume",
+        "type": "decimal(12,2)"
+      },
+      {
+        "field": "brokerage",
+        "type": "decimal(12,2)"
+      },
+      {
+        "field": "brokerage_two",
+        "type": "decimal(12,2)"
+      },
+      {
+        "field": "type",
+        "type": "tinyint(1)"
+      },
+      {
+        "field": "quota",
+        "type": "int(11)"
+      },
+      {
+        "field": "quota_show",
+        "type": "int(11)"
+      },
+      {
+        "field": "is_virtual",
+        "type": "tinyint(1)"
+      },
+      {
+        "field": "coupon_id",
+        "type": "int(11)"
+      },
+      {
+        "field": "disk_info",
+        "type": "text"
+      },
+      {
+        "field": "is_show",
+        "type": "int(1)"
+      },
+      {
+        "field": "is_default_select",
+        "type": "int(1)"
+      }
+    ]
+  },
+  "collector": {
+    "version": "1.0.0-local-shadow",
+    "generation": "10",
+    "products": {
+      "total": 2821,
+      "active": 2792
+    },
+    "skus": {
+      "total": 29152,
+      "active": 29126
+    },
+    "events": {
+      "count": 5505,
+      "first_id": 1,
+      "last_id": 5505
+    },
+    "raw_seed_categories": [
+      5,
+      38,
+      334
+    ],
+    "category_count_discrepancy": "Current raw seed has 334 unique leaves; historical Phase 1 reported 333; projection basis not confirmed",
+    "image_status": [
+      {
+        "status": "BASELINE_ONLY",
+        "count": 94442
+      }
+    ],
+    "items_with_local_file": 0,
+    "items_with_sha256": 0,
+    "media_content_directory_exists": false,
+    "release_code_entries_checked": 103,
+    "release_code_mismatches": [],
+    "historical_manifest_missing_files": 10,
+    "historical_manifest_different_present_files": 1,
+    "prior_tests": {
+      "tests": 424,
+      "date": "2026-10-11",
+      "failures": 0,
+      "errors": 0,
+      "rerun_this_task": false
+    },
+    "scheduled_task": {
+      "task_exists": true,
+      "enabled": false,
+      "state": "Disabled"
+    },
+    "collector_processes_observed": 0
+  },
+  "checks": {
+    "php": [
+      {
+        "file": "scripts/local/bootstrap.php",
+        "exit_code": 0
+      },
+      {
+        "file": "scripts/local/router.php",
+        "exit_code": 0
+      },
+      {
+        "file": "crmeb/app/outapi/controller/StoreProduct.php",
+        "exit_code": 0
+      },
+      {
+        "file": "crmeb/app/services/product/product/OutStoreProductServices.php",
+        "exit_code": 0
+      },
+      {
+        "file": "crmeb/app/services/product/product/StoreProductServices.php",
+        "exit_code": 0
+      },
+      {
+        "file": "crmeb/app/services/product/sku/StoreProductAttrServices.php",
+        "exit_code": 0
+      },
+      {
+        "file": "crmeb/app/services/product/sku/StoreProductAttrValueServices.php",
+        "exit_code": 0
+      },
+      {
+        "file": "crmeb/app/services/product/product/StoreCategoryServices.php",
+        "exit_code": 0
+      },
+      {
+        "file": "crmeb/app/services/other/UploadService.php",
+        "exit_code": 0
+      },
+      {
+        "file": "crmeb/app/services/system/crontab/SystemCrontabServices.php",
+        "exit_code": 0
+      }
+    ],
+    "js_exit": 0,
+    "ps": [
+      {
+        "file": "scripts/local/start.ps1",
+        "errors": 0
+      },
+      {
+        "file": "scripts/local/stop.ps1",
+        "errors": 0
+      }
+    ],
+    "rebuild_powershell_blocks": 6,
+    "rebuild_parse_errors": 0,
+    "node_version": "v24.19.0"
+  },
+  "api_checks": {
+    "apis": [
+      {
+        "url": "http://127.0.0.1:18080/api/category",
+        "business_status": 200,
+        "passed": true
+      },
+      {
+        "url": "http://127.0.0.1:18080/api/products?page=1&limit=2",
+        "business_status": 200,
+        "passed": true
+      },
+      {
+        "url": "http://127.0.0.1:18080/api/index",
+        "business_status": 200,
+        "passed": true
+      }
+    ],
+    "admin_page_http": 200
+  },
+  "collector_portability": {
+    "report_bytes_unchanged": true,
+    "actual_linux_runtime_tested": false,
+    "exit_code": 0
+  },
+  "not_run": [
+    "full collector regression",
+    "front-end dependency installation and build",
+    "HBuilderX source build",
+    "WeChat real login/pay/refund",
+    "production deployment",
+    "LATIV sync or cloud upload"
+  ],
+  "git_remotes": {
+    "upstream": "https://github.com/crmeb/CRMEB.git",
+    "push_branch": "codex/lativ-phase1",
+    "origin": "https://github.com/runy5231gunygn-glitch/lativ.git",
+    "existing_remote_main": "58b3f8e1e63b895f8aee3bcdbb0e073e58fdc421"
+  },
+  "push_result": "See final response and actual remote branch; this file is committed before push."
+}

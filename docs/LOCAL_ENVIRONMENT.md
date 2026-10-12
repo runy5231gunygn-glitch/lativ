@@ -1,5 +1,7 @@
 # Phase 1 本机测试环境
 
+本文件记录原电脑环境；新电脑先读[重建说明](LOCAL_REBUILD.md)，当前交接进度读根目录HANDOFF.md。clone不会带来.local运行库/数据库、crmeb/.env、演示上传图片或独立采集器。
+
 仅用于本机；不代表生产部署或支付验收。CRMEB固定源码基线为`da8d3b93400f3c660aa54d38b54ada387c963cd9`。
 
 ## 当前服务
