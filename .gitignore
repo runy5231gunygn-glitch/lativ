@@ -76,3 +76,6 @@ crmeb/runtime/temp/readme.md
 Dockerfile
 .codebuddy/models.json
 .codebuddy/rules/project-intro.mdc
+
+# LATIV local test runtime and credentials
+/.local/

@@ -1,0 +1,120 @@
+{
+  "current_page": "pages/index/index",
+  "screenshot": "docs/evidence/phase1-mini.png",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:18080/api/lang_version",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "4725ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/theme_info/theme",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "5848ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/basic_config",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "7507ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/copyright",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "7173ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/get_workerman_url",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "7244ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/get_open_adv",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "7552ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/theme_info/home",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "2631ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/share",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "4430ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/copyright",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "8277ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/v2/diy/sign",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "7306ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/pink",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "8065ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/combination/list",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "9384ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/products",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "12995ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/theme/navigation",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "13595ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/bargain/list",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "14529ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/seckill/index",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "15134ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/products",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "16892ms"
+    },
+    {
+      "url": "http://127.0.0.1:18080/api/seckill/list/281",
+      "http_status": 200,
+      "business_status": 200,
+      "duration": "2897ms"
+    }
+  ],
+  "tool": "wechatide-skill 0.3.9",
+  "upstream_source_modified": false,
+  "live_plugin_removed_in_test_copy": true,
+  "foundation_version": "3.15.2",
+  "remaining_console_error": "WeChat SDK clickCheckTask TypeError; page renders",
+  "homepage_images": "Observed banner and navigation images after routing bundled demo assets to localhost"
+}

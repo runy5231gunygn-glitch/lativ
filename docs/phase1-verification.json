@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-12",
+  "phase": 1,
+  "upstream_repository": "crmeb/CRMEB",
+  "upstream_ref": "master",
+  "upstream_commit": "da8d3b93400f3c660aa54d38b54ada387c963cd9",
+  "local_baseline_commit": "501ffcc4",
+  "branch": "codex/lativ-phase1",
+  "source_files_compared": 9279,
+  "changed_business_source_files": 0,
+  "php": "7.4.33",
+  "database": "MariaDB 10.11.10 local compatibility test",
+  "native_tables": 157,
+  "native_demo_products": 4,
+  "backend_browser_login": "passed",
+  "api_checks": [
+    "admin login",
+    "admin products",
+    "category",
+    "products",
+    "index",
+    "agent statistics",
+    "product statistics with date"
+  ],
+  "lativ_readonly": {
+    "events": 5505,
+    "products": 2821,
+    "categories": [
+      5,
+      38,
+      333
+    ],
+    "image_done": 0,
+    "active_product_skus": 29126,
+    "generation": 10,
+    "image_baseline_only": 94442,
+    "skus": 29152,
+    "active_products": 2792
+  },
+  "lativ_tables_created": 0,
+  "lativ_products_imported": 0,
+  "lativ_collectors_started": 0,
+  "phase2_started": false,
+  "wechat_tool_version": "2.02.2608070",
+  "wechat_login": "passed",
+  "wechat_project_open": "passed",
+  "wechat_page_runtime": "PASSED: currentPage pages/index/index and actual simulator screenshot; full commerce flow not verified",
+  "not_verified": [
+    "production MySQL/Linux",
+    "WeChat live payment/refund",
+    "supplier settlement price"
+  ],
+  "wechat_sdk_verification": "Verified using official wechatide-skill 0.3.9 after user client authorization; legacy SDK launch is not used as runtime proof",
+  "wechat_local_api_responses": 18,
+  "wechat_local_api_status": "HTTP 200 and business 200 for recorded responses",
+  "wechat_upstream_source_modified": false,
+  "wechat_runtime_limitations": [
+    "SDK timeout/clickCheckTask internal error remains",
+    "UniApp source rebuild not verified",
+    "Full commerce flows not verified"
+  ],
+  "wechat_homepage_images": "PASSED: banner and navigation images in actual screenshot; loopback shim uses bundled demo images"
+}
